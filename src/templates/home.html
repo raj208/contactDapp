@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>Contact DApp</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        h2 {
+            color: white;
+            background-color: orange;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        label {
+            color: blue;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-sm-4"></div>
+    <div class="container col-sm-4">
+        <center>
+            <h2>Contact DApp</h2>
+
+            <!-- Contact Form -->
+            <form action="/insertContact" method="post">
+                <div class="form-group">
+                    <label>Contact Name:</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter name" required/>
+                </div>
+                <div class="form-group">
+                    <label>Contact Number:</label>
+                    <input type="text" class="form-control" name="mobile" placeholder="Enter mobile number" required/>
+                </div>
+                <div class="form-group">
+                    <label>Email ID:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter email id" required/>
+                </div>
+                <div class="form-group">
+                    <label>Organization:</label>
+                    <input type="text" class="form-control" name="org" placeholder="Enter organization" required/>
+                </div>
+                <button type="submit" class="btn btn-primary">Insert Contact</button>
+            </form>
+
+            <br/>
+            
+            <!-- Error and Response Messages -->
+            <span style="color:red;">{{ error }}</span> 
+            <span style="color:green;">{{ res }}</span> 
+        </center>
+    </div>
+    <div class="col-sm-4"></div>
+
+    <!-- Optional JavaScript and Bootstrap dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-a5a27A17f68/4VfJG5+ug6g5qbgG6Bo7bS+mr8pRtA1l/dJ+Uoi2l/uBoaMEUeA9" crossorigin="anonymous"></script>
+</body>
+</html>
